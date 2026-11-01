@@ -12,8 +12,12 @@ Cada release contém:
 
 O código-fonte, testes e documentação técnica ficam no repositório privado `rrrabadan/ezhome`. Este repositório não recebe fontes do aplicativo. Os arquivos “Source code” adicionados automaticamente pelo GitHub contêm somente este README.
 
-Baixe o APK e confirme a atualização no instalador Android, com o veículo estacionado. O pacote permanece `com.rabadan.homedash`; atualizações assinadas com o mesmo certificado preservam dados e configurações. Na tela BYD **Desativar AutoStart**, deixe EZHome **DESL** para permitir o início automático.
+A partir da **0.5.28-alpha**, o botão **Verificar atualizações** encontra uma versão nova e pede confirmação em **Atualizar agora**. Depois o EZHome baixa e confere hash, pacote, versão e certificado do APK, instala, ativa **Iniciar com a central**, confere e permite o AutoStart na tela oficial da BYD e reabre o aplicativo. Requer a depuração local já autorizada para o EZHome. Não exige P ou velocidade zero.
 
-Distribuição alpha. A publicação automatizada valida assinatura, pacote e versão, mas não comprova comportamento físico na central. A primeira instalação de uma versão que contém o botão de atualização deve ser feita manualmente.
+Na tela BYD **Desativar AutoStart**, **EZHome DESL / checked=false** significa início permitido. O atualizador verifica esse estado após a instalação, pois o fabricante pode voltar a bloquear o app ao atualizar. Se não conseguir confirmar o AutoStart, informa a pendência e oferece **Corrigir AutoStart**, sem reinstalar o APK.
+
+Versões antigas que ainda abrem o navegador precisam de uma primeira atualização manual: baixe o APK e confirme no instalador Android. O pacote permanece `com.rabadan.homedash`; a assinatura atual preserva dados e permissões. As demais seleções e posições do app são mantidas.
+
+Distribuição alpha. A publicação automatizada valida assinatura, pacote e versão; o fluxo completo de instalação, UI AutoStart e reabertura ainda precisa de validação física autorizada na central. Um build aprovado não comprova comportamento físico.
 
 Certificado SHA-256: `a2a47c53f25faa56f096fd5ae083abf156148b70274532f5375464f045491c2a`.
